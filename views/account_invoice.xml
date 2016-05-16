@@ -1,0 +1,17 @@
+<openerp>
+	<data>
+		<record id="account_invoice_form_inherit" model="ir.ui.view">
+			<field name="name">secto.account.invoice.form.inherit</field>
+			<field name="model">account.invoice</field>
+			<field name="inherit_id" ref="account.invoice_form"/>
+			<field name="priority" eval="100"/>
+			<field name="arch" type="xml">
+				<notebook position="before">
+					<group>
+						<field style="color: #FF0000" name="partner_invoice_warn_msg" attrs="{ 'invisible': [('partner_invoice_warn_msg','=', False)] }"/>
+					</group>
+				</notebook>
+			</field>
+		</record>
+	</data>
+</openerp>
